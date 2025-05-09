@@ -181,6 +181,7 @@ def predict_phishing():
         # Jangan ekspos detail error internal ke user
         return jsonify({"error": "An internal error occurred during prediction."}), 500
 
-# --- Menjalankan Aplikasi ---
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+    from os import environ
+    port = int(environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
