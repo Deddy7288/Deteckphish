@@ -18,8 +18,8 @@ CORS(app) # <<<--- 2. Aktifkan CORS untuk semua route dan origin (aman untuk dev
 
 # --- Memuat Model dan Scaler ---
 # Lakukan ini di luar fungsi route agar hanya dimuat sekali saat aplikasi dimulai
-MODEL_PATH = phishing_model.keras
-SCALER_PATH = scaler.pkl # Pastikan nama file dan path ini benar
+MODEL_PATH = "phishing_model.keras"
+SCALER_PATH = "scaler.pkl" # Pastikan nama file dan path ini benar
 
 model = None
 scaler = None
